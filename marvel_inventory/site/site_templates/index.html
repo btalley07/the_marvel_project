@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Flask Flashed Messages to User -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat,msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss = 'alert'>&times;</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+  <div class="container">
+    <!-- Header Section -->
+    <header class="row">
+        <div class="col-md-6" id="header-text">
+            <h2>Want your very own collection of Marvel Heroes!</h2>
+            <h5>Create an amzing API tool for the collection of your drea,s.</h5>
+        
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+        <!--Header Image Section -->
+        <div class="col-12 col-md-6">
+            <img class="header-image" src="../../static/images/noun_superhero toy_2097961.png" alt="Hero Header Image">
+        </div>
+    </header>
+
+    <!--End of Header Section-->
+
+    <!--Start Middle Section-->
+    <section class="row">
+        <div class="col-12" id="middle-text">
+            <h2>Display Your Collection!</h2>
+            <p>You can harness the power of an API to expand your collection!</p>
+        </div>
+    </section>
+    <!--End of Middle Section-->
+
+    <!--Collection of Features Section-->
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../static/images/noun_Fist_3105989.png" alt="API Image" id="api-image">
+            <h4>Dedicated API Routes</h4>
+            <p>
+                If you are a fan of using traditional API routes, we have those for you!
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../static/images/noun_Superhero_147465.png" alt="graphql-image" id="graphql-image">
+            <h4>GraphQL API Route</h4>
+            <p>
+                If you want ALL data from one endpoint, we have that too!
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../static/images/noun_Laser_Eyes_882199.png" alt="database-image" id="database-image">
+            <h4>Backed By a PostgreSQL Database</h4>
+            <p>
+                All data will be persisted inside of a secure Postgres Database.
+            </p>
+        </div>
+    </section>
+    <!--End of Collection Features-->
+
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../static/images/noun_Superhero_2097961.svg" alt="Drone Image" id="Drone-image">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <h4>Talk with like minded Marvel lovers</h4>
+            <p>
+                Talk with other devs around the world and collab
+                on projects with you data. Join our slack channel and give
+                a star to the project on Github!
+            </p>
+            <div>
+                <button class="btn btn-primary">View On Github</button>
+                <button class="btn btn-primary">Join Our Slack Channel!</button>
+            </div>
+        </div>
+    </section>
+    <!--End of Community Section-->
+
+    <!--Start of Footer-->
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <img src="../static/images/noun_ironman_733620.png" alt="Coding Drones Logo" id="footer-logo">
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why The Marvel Project?</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why The Marvel Project?</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why The Marvel Project?</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why The Marvel Project?</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why The Marvel Project?</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+
+
+{% endblock content %}
